@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+  }
+  
+  .header {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  .img_coverHeader {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-size: cover; */
+  }
+  
+  .showdown_bg {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: bisque; */
+    position: absolute;
+    top: 0;
+    padding: 15px 100px 0;
+  }
+  
+  .menu .logo_container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo_container img {
+    width: 100px;
+  }
+  
+  .menu ul {
+    display: flex;
+    width: 70%;
+  }
+  
+  .menu ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /*  */
+  .header_title {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+  }
+  
+  .header_title h1 {
+    color: whitesmoke;
+    font-family: "Courier New", Courier, monospace;
+    width: fit-content;
+  }
+  
+  .header_button_container {
+    margin-top: 20px;
+    display: flex;
+    width: 400px;
+  }
+  
+  .header_button_container .hungry {
+    color: white;
+    width: 40%;
+    margin-right: 20px;
+    padding: 12px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(255, 166, 0);
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+  }
+  
+  .header_button_container .hungry:hover {
+    background: none;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(255, 166, 0);
+  }
+  
+  .header_button_container #showmore {
+    width: 60%;
+    padding: 12px;
+    border-radius: 20px;
+    background: none;
+    color: rgb(255, 166, 0);
+    border: 2px solid rgb(255, 166, 0);
+  }
+  
+  .header_button_container #showmore:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(255, 166, 0);
+  }
+  
+  #box {
+    display: none;
+  }

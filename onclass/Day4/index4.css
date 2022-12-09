@@ -1,0 +1,10 @@
+.box1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box2{
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 200px;
+}

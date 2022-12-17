@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    border: black solid 0.5px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 12%;
+}
+input{
+    margin-top: 20px;
+    height: 25px;
+}
+#btn{
+    margin-top: 20px;
+    width: 200px;
+    background-color: green;
+    height: 20px;
+    border: none;
+}
+#btn:hover{
+    cursor: pointer;
+}

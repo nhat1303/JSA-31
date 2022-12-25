@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            position:absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 200px;
+        }
+
+        input{
+            width: 200px;
+            height: 30px;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        select{
+            width: 200px;
+            height: 30px;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        h2{
+            margin-bottom: 30px;
+        }
+        #btn{
+            width: 200px;
+            margin-left: 50px;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            height: 30px;
+            border-radius: 3px;
+        }
+        #btn:hover{
+            cursor: pointer;
+            background-color: rgb(90, 90, 90);
+        }
+        .img{
+            width: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #btn2{
+            width: 200px;
+            margin-left: 50px;
+            margin-top: 5px;
+            background-color: black;
+            color: white;
+            border: none;
+            height: 30px;
+            border-radius: 3px;
+        }
+        #btn2:hover{
+            cursor: pointer;
+            background-color: rgb(90, 90, 90);
+        }
+        .img{
+            width: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #btn1{
+            width: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            top: 25%;
+            border: none;
+            border-radius: 5px;
+        }
+        #btn1:hover{
+            cursor: pointer;
+            background-color: rgb(90, 90, 90);
+        }
+    </style>
+</head>
+<body>
+    <img class="img" src="https://www.thesun.co.uk/wp-content/uploads/2018/07/aj2i0935-JS775421720.jpg" alt="">
+    <button id="btn1">CLICK</button>
+    <form action="" id="form">
+        <div class="box">
+
+            <h2>SHOPPING</h2>
+            <input type="text"id="item" placeholder="ITEM">
+            <!-- <select name="QUANTITY" id="quantity">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+            </select> -->
+
+            <input type="number" min="1" max="10" id="size" placeholder="QUANTITY">
+            <button id="btn">SUBMIT</button>
+        </div>
+    </form>
+    
+    
+
+
+
+    <script src="baitap_6.js"></script>
+</body>
+</html>

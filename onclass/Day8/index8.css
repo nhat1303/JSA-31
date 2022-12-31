@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+body{
+    background-color: rgb(48, 60, 78);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#btn{
+    margin-top: 20px;
+    height: 20px;
+}
+#btn{
+    cursor: pointer;
+}
+#input{
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-size: 15px;
+}

@@ -4,6 +4,9 @@ let input = document.getElementById("input")
 let btn = document.getElementById("btn")
 let menu = ["rau xào", "thịt luộc", "gà rán"]
 
+if (localStorage.getItem("Menu")==null){
+    localStorage.setItem("Menu", JSON.stringify(menu))
+}
 
     btn.addEventListener('click', function MAIN_FUNCTION(){
     if (input.value != "C"&& input.value !="R" && input.value != "U" && input.value != "D"){
@@ -58,10 +61,13 @@ function Update(){
     for (i=0; i<=menu.length; i++){
         if( menu[i]== old_food){
             let new_food =  window.prompt("Nhập món mới : ")
-             menu.push(new_food)
-            let delete_item = menu.indexOf(old_food)
-            delete menu[delete_item]
+            menu.splice(i,1,new_food)
             localStorage.setItem("Menu", JSON.stringify(menu))
+
+            //  menu.push(new_food)
+            // let delete_item = menu.indexOf(old_food)
+            // delete menu[delete_item]
+
         }
     
     }
@@ -73,8 +79,7 @@ function Delete(){
     let delete_food = window.prompt("Nhập món muốn xoá : ")
     for (i=0; i<=menu.length; i++){
         if( delete_food == menu[i]){
-            let index_food = menu.indexOf(delete_food)
-            delete menu[index_food]
+            menu.splice(i,1)
             localStorage.setItem("Menu", JSON.stringify(menu))
             
         }

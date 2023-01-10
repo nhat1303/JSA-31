@@ -5,6 +5,7 @@ let g = 10
 let a = document.getElementById("params_a")
 let b = document.getElementById("params_b")
 let c = document.getElementById("params_c")
+let info = document.getElementById("info")
 btn.addEventListener("click", function(){
     let vx = v0.value*Math.cos(goc.value*Math.PI/180)
     let vy = v0.value*Math.sin(goc.value*Math.PI/180)   
@@ -14,16 +15,15 @@ btn.addEventListener("click", function(){
     a.value=-g/(2*v0.value**2*Math.cos(goc.value*Math.PI/180)**2)
     b.value = Math.tan(goc.value*Math.PI/180)
     c.value = 0
-    console.log("Góc : " + goc.value)
-    console.log("Vận tốc ban đầu : " + v0.value)
-    console.log("Vận tốc ban đầu trên trục x : " + vx)
-    console.log("Vận tốc ban đầu trên trục y : " + vy)
-    console.log("Thời gian chuyển động : " + t)
-    console.log("Độ cao cực đại : " + H)
-    console.log("Tầm xa tính theo phương ngang : "+ L)
+    console.log("Góc : " + goc.value + " độ")
+    console.log("Vận tốc ban đầu : " + v0.value + " m/s")
+    console.log("Vận tốc ban đầu trên trục x : " + vx+ " m/s")
+    console.log("Vận tốc ban đầu trên trục y : " + vy + " m/s")
+    console.log("Thời gian chuyển động : " + t + " s")
+    console.log("Độ cao cực đại : " + H + " m")
+    console.log("Tầm xa tính theo phương ngang : "+ L + " m")
     
-
-
+    
 
     goc.value =""
     v0.value = ""
@@ -101,8 +101,8 @@ class Point {
   document.addEventListener("DOMContentLoaded", main);
   
   const [width, height] = [800, 800];
-  const center = new Point(width / 2, height / 2);
-  const cellSide = 30;
+  const center = new Point(width / 2, height / 1);
+  const cellSide = 20;
   const points = [];
   
   function main() {

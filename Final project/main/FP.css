@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    object-fit: cover;
+}
+
+
+/* .menu {
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    position:fixed;
+    top:0;
+    z-index: 100;
+
+}
+.menu ul {
+    display: inline-flex;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.menu ul li {
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+.gg-heart{
+    margin-top: 38px;
+    color: black;
+}
+.gg-heart:hover{
+    opacity: 0.5;
+}
+.gg-shopping-cart{
+    margin-top: 30px;
+    color: black;
+}
+.gg-shopping-cart:hover{
+    opacity: 0.5;
+}
+
+
+.menu ul li:hover{
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+.subproduct{
+    
+    display: none;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.menu ul li:hover .subproduct{
+    display: block;
+    position: absolute;
+}
+.menu ul li:hover .subproduct ul {
+    display: block;
+    
+} */
+
+.box{
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.png");
+    /* filter: blur(5px); */
+}
+.logo_img{
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
+}
+.logo_word{
+    position: absolute;
+    top: 25%;
+    left: 62%;
+    font-size: 50px;
+    z-index: 2;
+}
+.logo_word1{
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    font-size: 30px;
+    z-index: 2;
+}
+
+.discover1{
+    position: absolute;
+    top: 55%;
+    width: 300px;
+    height: 60px;
+    left: 70%;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.discover1word:hover{
+    color: rgb(170, 157, 157);
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+.Menu{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    font-size: 30px;
+    /* border: 1px solid black; */
+    height: 120px;
+    z-index: 1;
+    width: 200px;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    
+}
+ul li {
+    list-style: none;
+    margin-bottom: 55px;
+}
+.Menu:hover{
+    cursor: pointer;
+    
+}
+
+
+.Menu:hover .logo_img{
+    filter: blur(5px);
+    transition: ease 0.5s;
+}
+.Menu ul li:hover{
+    opacity: 0.5;
+    transition: ease 0.5s;
+}
+
+
+
+
+
+
+.boxMenu{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 2%;
+    /* background-color: pink; */
+}
+.block{
+    width: 600px;
+    height: 600px;
+    /* background-color: pink; */
+    z-index: 10;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.discover1{
+    position: relative;
+    /* padding-top: 15px; */
+    z-index: 2;
+}
+.logo_img{
+    z-index: 1;
+    width: 100%;
+    box-shadow: inset ;
+}
+
+.menu{
+    border: none;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: transparent;
+}
+.menu:hover{
+    cursor: pointer;
+}
+
+.hidden_menu{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 3px solid black;
+    width: 400px;
+}

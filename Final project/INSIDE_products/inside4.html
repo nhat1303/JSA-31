@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+
+}
+
+.img1{
+    width: 600px;
+    position: absolute;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px; 
+     margin-top: 50px;
+    position: relative;
+    height: 100vh;
+}
+.box_img1{
+    background-color: white;
+    width: 600px;
+    height: 800px;
+    position: absolute;
+}
+
+.radio_box{
+    position: absolute;
+    top: 75%;
+    left: 18%;
+    height: 20px;
+}
+
+
+.radio:hover{
+    cursor: pointer;
+
+}
+
+
+
+
+.info{
+    position: absolute;
+    left: 50%;
+    font-size: 25px;
+    border-bottom: 5px solid black;
+    width: 500px;
+    top: 10%;
+}
+.price{
+    position:absolute;
+    left: 50%;
+    top: 25%;
+    font-size: 30px;
+}
+.btn{
+    width: 400px;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    height: 50px;
+    font-size: 20px;
+    background-color: white;
+}
+.btn:hover{
+    border: none;
+    transition:  0.6s;
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+}
+
+
+.Menu{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    font-size: 30px;
+
+    height: 120px;
+    z-index: 1;
+    width: 200px;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    
+}
+ul li {
+    list-style: none;
+    margin-bottom: 55px;
+}
+.Menu:hover{
+    cursor: pointer;
+    
+}
+
+
+.Menu:hover .logo_img{
+    filter: blur(5px);
+    transition: ease 0.5s;
+}
+.Menu ul li:hover{
+    opacity: 0.5;
+    transition: ease 0.5s;
+}
+
+
+
+
+
+
+.boxMenu{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 2%;
+     background-color: pink; 
+ }
+ .menu{
+    border: none;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: transparent;
+}
+.menu:hover{
+    cursor: pointer;
+}
+
+.hidden_menu{
+    margin-top: 40px;
+    padding-top: 20px;
+    
+    width: 400px;
+}
+
+.detail_head{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+}
+
+.detail{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    font-size: 20px;
+}  
+    </style>
+    
+
+</head>
+<body>
+    <div class="Menu">
+        
+        <nav>
+            <ul>
+                <!-- <li class="MENU" id="Menu"><i class="fa-solid fa-bars"></i> Menu</li> -->
+                <button id="btn" class="menu"><i class="fa-solid fa-bars"></i> Menu</button>
+                <div class="box_menuhidden">
+                    <div id="hidden" class="hidden_menu">
+                        <ul>
+                            <li><a href="FP.html">About us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <!-- <li><a href="">Women products</a></li>
+                            <li><a href="">Kids products</a></li> -->
+                            <li><a href="">Sign in</a></li>
+                            <li><a href=""><i class="gg-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </ul>
+        </nav>
+        
+    </div>
+
+
+    <div id="box" class="box">
+
+        <div id="img1" class="box_img1">
+            <img src="https://www.chanel.com/images//t_one/t_fnbedito//q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/high-intensity-lip-colour-br-concentrated-radiance-and-care-br-refillable-854-0-07oz--packshot-alternative-v2-163854-8851942015006.jpg" alt="" class="img1">
+           
+        </div>
+        <div id="img2" class="box_img1">
+            <img src="https://www.chanel.com/images//t_one/t_fnbedito/w_0.38,h_0.38,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/high-intensity-lip-colour-br-concentrated-radiance-and-care-br-refillable-854-0-07oz--packshot-alternative-v1-163854-8851940737054.jpg" alt="" class="img1">
+
+        </div>
+        <div id="img3" class="box_img1">
+            <img class="img1" src="https://www.chanel.com/images//t_one//w_0.38,h_0.38,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/high-intensity-lip-colour-br-concentrated-radiance-and-care-br-refillable-854-0-07oz--packshot-default-163854-8851339542558.jpg" alt="">   
+
+        </div>
+
+        <div class="radio_box">
+           <input class="radio" id="radio1" type="radio" name="radio">
+           <input class="radio" id="radio2" type="radio" name="radio">
+           <input class="radio" id="radio3" type="radio" name="radio">
+
+            </div>
+
+         <div class="info">
+            <h2>ROUGE ALLURE L'EXTRAIT</h2>
+         </div>
+         <p class="price">$200</p>
+         <h3 class="detail_head">ELEMENT</h3>
+         <p class="detail">Lipstick combines personality color with high color intensity and caring and nourishing properties for more radiant lips. A formula that moisturizes, feels comfortable and protects thanks to a combination of ume flower extracts and botanical waxes. For radiant makeup style, personality.
+           <br> The iconic black and gold case design has been revamped, becoming thinner and replaceable, ensuring a silky-smooth feel on the lips, precise contouring in 20 satin-effect shades. . The replacement cores fit the Rouge Allure L'Extrait lipstick case you already own. For a personality makeup style, sharp and radiant.</p>
+
+         <!-- <button class="btn">Add to cart</button> -->
+        <!-- <img src="https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/high-intensity-lip-colour-br-concentrated-radiance-and-care-br-refillable-854-0-07oz--basic-texture-163854-8851316015134.jpg" alt="" class="img1"> -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script
+    src="https://kit.fontawesome.com/b25957ae4f.js"
+    crossorigin="anonymous"
+  ></script>
+
+<script src="inside1.js"></script>
+
+
+</body>
+
+</html>

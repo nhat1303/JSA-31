@@ -12,10 +12,8 @@ body{
     display: flex;
     flex-direction: column;
     width: 250px;
-    position: absolute;
-    top: 20%;
-    
     left: 70%;
+    position: fixed;
 }
 
 .number_need{

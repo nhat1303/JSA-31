@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+
+
+}
+
+/* DÙNG ABSOLUTE BỊ MẤT BACKGROUND */
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.input {
+    height: 30px;
+    border: none;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 5px;
+    color: white;
+}
+#btn{
+    background-color: rgb(231, 108, 108);
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+#btn:hover{
+    cursor: pointer;
+}
+
+#checkbox{
+    position: absolute;
+    top: 65%;
+}
+.argee_term{
+    position: relative;
+    left: 10%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.sign_in{
+    margin-top: 10px ;
+    font-size: 13px;
+}
+.menu {
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    position:fixed;
+    top:0;
+    z-index: 100;
+
+}
+.menu ul {
+    display: inline-flex;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.menu ul li {
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+.gg-heart{
+    margin-top: 38px;
+    color: black;
+}
+.gg-heart:hover{
+    opacity: 0.5;
+}
+.gg-shopping-cart{
+    margin-top: 30px;
+    color: black;
+}
+.gg-shopping-cart:hover{
+    opacity: 0.5;
+}
+
+
+.menu ul li:hover{
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+.subproduct{
+    
+    display: none;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.menu ul li:hover .subproduct{
+    display: block;
+    position: absolute;
+}
+.menu ul li:hover .subproduct ul {
+    display: block;
+    
+}

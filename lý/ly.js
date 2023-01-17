@@ -6,7 +6,24 @@ let a = document.getElementById("params_a")
 let b = document.getElementById("params_b")
 let c = document.getElementById("params_c")
 let info = document.getElementById("info")
+let h =document.getElementById("docao")
 btn.addEventListener("click", function(){
+  if(
+    goc.value>180 || goc.value<0
+  ){
+    alert("Bạn phải nhập số góc từ 0 tới 180")
+  }
+  else if(
+    v0.value<0
+  ){
+    alert("Bạn phải nhập vận tốc là số dương")
+  }
+  else if(
+    h.value<0
+  ){
+    alert("Độ cao vật phải là số dương")
+  }
+  else{
     let vx = v0.value*Math.cos(goc.value*Math.PI/180)
     let vy = v0.value*Math.sin(goc.value*Math.PI/180)   
     let t = ((2*v0.value*Math.sin(goc.value*Math.PI/180))/g)
@@ -14,9 +31,10 @@ btn.addEventListener("click", function(){
     let L = (v0.value**2 * Math.sin(2*goc.value*Math.PI/180))/g
     a.value=-g/(2*v0.value**2*Math.cos(goc.value*Math.PI/180)**2)
     b.value = Math.tan(goc.value*Math.PI/180)
-    c.value = 0
+    c.value = h.value
     console.log("Góc : " + goc.value + " độ")
     console.log("Vận tốc ban đầu : " + v0.value + " m/s")
+    console.log("Độ cao lúc vật bị ném : " + h.value + "m")
     console.log("Vận tốc ban đầu trên trục x : " + vx+ " m/s")
     console.log("Vận tốc ban đầu trên trục y : " + vy + " m/s")
     console.log("Thời gian chuyển động : " + t + " s")
@@ -24,9 +42,12 @@ btn.addEventListener("click", function(){
     console.log("Tầm xa tính theo phương ngang : "+ L + " m")
     
     
-
+    h.value= ""
     goc.value =""
     v0.value = ""
+  }
+
+    
 })
 
 
@@ -101,7 +122,7 @@ class Point {
   document.addEventListener("DOMContentLoaded", main);
   
   const [width, height] = [800, 800];
-  const center = new Point(width / 2, height / 1);
+  const center = new Point(width / 2, height/ 2);
   const cellSide = 20;
   const points = [];
   

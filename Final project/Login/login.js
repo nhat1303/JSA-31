@@ -2,8 +2,18 @@ let username = document.getElementById("username1")
 let password = document.getElementById("password1")
 let btn = document.getElementById("btn1")
 let LIST = JSON.parse(localStorage.getItem("Register_user"))
+console.log(LIST)
+// console.log(LIST[1].Username)
+// function abc(){
+//     for ( i = 0 ; i < LIST.length ; i ++){
+//         if ( "uashlgasgha" == LIST[i].Username){
+//             return true
+//         }
+//     }
+    
+// }
 
-
+// console.log(abc())
 
 
 btn.addEventListener("click", function(){
@@ -12,19 +22,19 @@ btn.addEventListener("click", function(){
         username.value=""
         password.value=""
     }
-    else if (username.value ==""){
-        alert("Username must be filled")
+    else if ( username.value == ""){
+        alert(" You must fill username ")
     }
-    else if (password.value==""){
-        alert("Password must be filled")
+    else if ( password.value == ""){
+
+        alert( " You must fill password")
     }
-    else if (CheckUser(username.value)== false){
-        alert("Wrong username")
+    else if ( CheckUser(username.value) != true){
+        alert(" Wrong username")
     }
-    else if (CheckUser(password.value)== false){
-        alert("Wrong password")
+    else if ( CheckPass( password.value) != true){
+        alert(" Wrong password")
     }
-    
 
 
 
@@ -35,29 +45,20 @@ btn.addEventListener("click", function(){
 
 function CheckUser(){
     
-for(i=0;i<=LIST.length;i++){
-    if( username.value == LIST[i].Username){
-        return true
-        // console.log("kasdhj;gha")
-    }else if( username.value !=LIST[i].Username){
-        
-        return false
+    for ( i = 0 ; i < LIST.length ; i ++){
+        if ( username.value == LIST[i].Username){
+            return true
+        }
     }
-
-
-
 }
-}
-CheckUser()
+console.log(CheckUser())
 
 function CheckPass(){
-    for(i=0;i<=LIST.length;i++){
+    for( i = 0 ; i < LIST.length; i++){
         if( password.value == LIST[i].Password){
             return true
         }
-        else if( password.value != LIST[1].Password){
-         return false  
-        }
+        
     
     
     }

@@ -8,23 +8,23 @@ let data_user = []
 let check  = JSON.parse(localStorage.getItem("Register_user"))
 if (check==null){
     localStorage.setItem("Register_user",JSON.stringify(data_user))
-    // btn.addEventListener("click", function(){
-    //     let newUser={}
-    //     if(username.value!=""&& password.value != "" && password.value == repeat_password.value && checkbox.checked ==true
-    //     ){
-    //         newUser={
-    //             Username:username.value,
-    //             Password:password.value
-    //         }
-    //         data_user.push(newUser)
-    //         localStorage.setItem("Register_user",JSON.stringify(data_user))
-    //         username.value =""
-    //         password.value =""
-    //         repeat_password.value =""
-    //         checkbox.checked=false
-    //     }
+    btn.addEventListener("click", function(){
+        let newUser={}
+        if(username.value!=""&& password.value != "" && password.value == repeat_password.value && checkbox.checked ==true
+        ){
+            newUser={
+                Username:username.value,
+                Password:password.value
+            }
+            data_user.push(newUser)
+            localStorage.setItem("Register_user",JSON.stringify(data_user))
+            username.value =""
+            password.value =""
+            repeat_password.value =""
+            checkbox.checked=false
+        }
 
-    // })
+    })
 }else{
     let LIST = JSON.parse(localStorage.getItem("Register_user"))
     
@@ -33,7 +33,7 @@ if (check==null){
         let newUser ={}
     
         if (
-            checkValidateUser(username.value)==true && checkPassword1(password.value)==true && password.value == repeat_password.value && checkbox.checked ==true
+            CheckUser() == true && password.value != "" && password.value == repeat_password.value && checkbox.checked ==true
         ){
             newUser = {
                 Username : username.value,
@@ -41,7 +41,7 @@ if (check==null){
             }
             LIST.push(newUser)
             localStorage.setItem("Register_user", JSON.stringify(LIST))
-            alert("Bạn đã đăng ký thành công")
+            alert("Register successfully")
     
             username.value =""
             password.value =""
@@ -51,19 +51,17 @@ if (check==null){
         }
         
         else if(username.value==""|| password.value==""){
-            alert("Bạn phải nhập tên đăng nhập và mật khẩu")
+            alert("You must fill username and password")
         }
         else if (username.value !="" && password.value !="" && password.value == repeat_password.value && checkbox.checked==false){
-            alert("Bạn phải đồng ý với những điều khoản của chúng tôi")
+            alert("You must accept our policy")
         }
         else if ( password.value != repeat_password.value){
-            alert("Mật khẩu bạn nhập không trùng khớp")
+            alert("Your repeat password is incorrect")
         }
-        else if (password.value.length<8){
-            alert("Bạn phải đặt mật khẩu dài 8 chữ trở lên")
-        } 
+        
         else if (
-            abc(username.value)==true
+            CheckUser() == false
         ){
             alert("Username existed")
         }
@@ -90,33 +88,22 @@ if (check==null){
 
 
 
-
+let LIST = JSON.parse(localStorage.getItem("Register_user"))
 
 // checkUsername
-function checkValidateUser(username) {
-    if (username.value == "") {
-      alert("User empty");
-      return false;
+function CheckUser() {
+    
+    for ( i = 0 ; i < LIST.length ; i ++){
+        if ( username.value != LIST[i].Username){
+            return true
+        }else{
+            return false
+        }
     }
-    // userAccount tên user ng dùng nhập => string
-  
-    let LIST = JSON.parse(localStorage.getItem("listUser"));
-    for (let i = 0; i < LIST.length; i++) {
-      if (username.value == listUser[i].Username) {
-        alert("User existed");
-        return false;
-      }
-    }
-  
-    return true;
-  }
-  
+}
+console.log(CheckUser())
+
+
   // checkPassword
-  function checkPassword1(password) {
-    if (password.value == "") {
-      alert("password empty");
-      return false;
-    }
-  
-    return true;
-  }
+//   function checkPassword1() {
+//   }

@@ -6,7 +6,12 @@ let a = document.getElementById("params_a")
 let b = document.getElementById("params_b")
 let c = document.getElementById("params_c")
 let info = document.getElementById("info")
-let h =document.getElementById("docao")
+let h = document.getElementById("docao")
+
+
+
+
+
 btn.addEventListener("click", function(){
   if(
     goc.value>180 || goc.value<0
@@ -24,22 +29,44 @@ btn.addEventListener("click", function(){
     alert("Độ cao vật phải là số dương")
   }
   else{
+    
+
+
+
+
+
     let vx = v0.value*Math.cos(goc.value*Math.PI/180)
     let vy = v0.value*Math.sin(goc.value*Math.PI/180)   
-    let t = ((2*v0.value*Math.sin(goc.value*Math.PI/180))/g)
-    let H = ((v0.value**2 * Math.sin(goc.value*Math.PI/180)**2)/2*g)/100
-    let L = (v0.value**2 * Math.sin(2*goc.value*Math.PI/180))/g
+    let H = ((v0.value**2 * Math.sin(goc.value*Math.PI/180)**2)/2*g)/100 + Number(h.value)
+   
+   
+    let t1 =  (  v0.value * Math.sin( goc.value * Math.PI/180)/ g)
+    let t2 = Math.sqrt( ( 2* H)/ g)
+    let t = t1 + t2
+    
+    
+    let  l_1 = ( v0.value**2 * Math.sin( 2* goc.value * Math.PI/180))/ (2*g)
+    let l_2 = ( v0.value * Math.cos( goc.value * Math.PI/180))
+    let l_3 = Math.sqrt( (2 * ( H ))  / 10 )
+
+
+    let L = l_1 + l_2 * l_3
+
+   
+   
     a.value=-g/(2*v0.value**2*Math.cos(goc.value*Math.PI/180)**2)
     b.value = Math.tan(goc.value*Math.PI/180)
     c.value = h.value
+
     console.log("Góc : " + goc.value + " độ")
     console.log("Vận tốc ban đầu : " + v0.value + " m/s")
-    console.log("Độ cao lúc vật bị ném : " + h.value + "m")
+    console.log("Độ cao lúc vật bị ném : " + h.value + " m")
     console.log("Vận tốc ban đầu trên trục x : " + vx+ " m/s")
     console.log("Vận tốc ban đầu trên trục y : " + vy + " m/s")
     console.log("Thời gian chuyển động : " + t + " s")
     console.log("Độ cao cực đại : " + H + " m")
-    console.log("Tầm xa tính theo phương ngang : "+ L + " m")
+    console.log("Tầm xa cực đại của vật : " + L + " m")
+    
     
     
     h.value= ""
@@ -47,9 +74,9 @@ btn.addEventListener("click", function(){
     v0.value = ""
   }
 
+
     
 })
-
 
 
 class Point {
@@ -234,4 +261,7 @@ class Point {
   
     frame();
   }
+  
+
+
   

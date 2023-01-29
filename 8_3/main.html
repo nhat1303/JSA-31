@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div class="loading"></div>
+    </div>
+
+
+
+
+
+        <div class="main-img">
+            <img class="main-logo" src="h1.jpg" alt="">
+            
+            
+            <div class="main-info">
+                <h2 class="main-h2"> Q U Ỳ N H <br>  T R A N G</h2>
+            <button id="btn"> Explore</button>
+                
+            </div>
+
+
+
+        </div>
+        
+
+
+
+
+    <script>
+        $(window).on("load", function(){
+            $(".loader").fadeOut("1000");
+        })
+
+        let btn = document.getElementById("btn")
+        btn.addEventListener('click', function(){
+            document.location = "explore.html"
+        })
+    </script>
+</body>
+</html>

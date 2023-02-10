@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="explore-2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="loader">
+        <div class="loading"></div>
+    </div>
+    <div class="main-menu">
+        <div class="main-h3">
+            <p >Q U Ỳ N H <br> T R A N G</p>
+
+        </div>
+
+        <div class="main-others">
+            <button class="main-block"></button>
+            <button id="btn-1" class="main-explore">Explore</button>
+            <button id="btn-2" class="main-about">About</button>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="content-1">
+        <img src="travelling.jpg" alt="" class="content-1-img">
+        <div class="content-1-detail">
+            <p class="content-1-p">
+                H O &nbsp; T R A M
+            </p>
+        </div>
+    </div>
+
+
+    <div class="content-2">
+        <img src="travelling2.jpg" alt="" class="content-2-img">
+        <div class="content-2-detail">
+            <p class="content-2-p">B A &nbsp; N A &nbsp; H I L L</p>
+        </div>
+    </div>
+
+
+    <div class="explore-footer">
+        <p class="footer-h2">©2023 Q U Ỳ N H T R A N G</p>
+    </div>
+    <script>
+
+$(window).on("load", function(){
+            $(".loader").fadeOut("1000");
+        })
+        let btn1= document.getElementById("btn-1")
+        let btn2= document.getElementById("btn-2")
+
+
+        btn1.addEventListener("click", function(){
+            document.location= "explore.html"
+        })
+        btn2.addEventListener("click", function(){
+            document.location= "about.html"
+        })
+
+        
+        
+
+
+    </script>
+</body>
+</html>

@@ -3,81 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Georgia, serif;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 
-/* .menu {
-    text-align: center;
-    height: 80px;
-    width: 100%;
-    position:fixed;
-    top:0;
-    z-index: 100;
-
-}
-.menu ul {
-    display: inline-flex;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    
-    
-}
-.menu ul li {
-    margin-top: 30px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-.menu ul li a {
-    text-decoration: none;
-    color: black;
-    
-
-}
-
-.gg-heart{
-    margin-top: 38px;
-    color: black;
-}
-.gg-heart:hover{
-    opacity: 0.5;
-}
-.gg-shopping-cart{
-    margin-top: 30px;
-    color: black;
-}
-.gg-shopping-cart:hover{
-    opacity: 0.5;
-}
-
-
-.menu ul li:hover{
-    border-bottom: 1px solid black;
-    padding-bottom: 15px;
-}
-
-.subproduct{
-    
-    display: none;
-    font-size: 18px;
-    padding-bottom: 5px;
-}
-.menu ul li:hover .subproduct{
-    display: block;
-    position: absolute;
-}
-.menu ul li:hover .subproduct ul {
-    display: block;
-    
-} */
 
 .box{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-image: url("background.png");
+    /* background-image: url("background.png"); */
     /* filter: blur(5px); */
+    position: relative;
 }
 .logo_img{
     height: 80vh;
@@ -99,7 +35,7 @@
     z-index: 2;
 }
 
-.discover1{
+/* .discover1{
     position: absolute;
     top: 55%;
     width: 300px;
@@ -116,7 +52,7 @@
     cursor: pointer;
     transition: 0.5s;
     
-}
+} */
 
 .Menu{
     position: absolute;
@@ -206,15 +142,14 @@ ul li {
 
 .footer{
     width: 100%;
-    height: 400px;
+    height: 100px;
     background-color: white;
-
+    position: relative;
 }
 
 .footer-img-box{
     position: absolute;
     left: 50%;  
-    top: 180%;
     width: 200px;
     transform: translateX(-50%);
     display: flex;
@@ -223,4 +158,143 @@ ul li {
 
 .footer-img{
     width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROFILE  */
+
+
+.profile-box{
+    position: absolute;
+    z-index: 5;
+    left: 90%;
+    top: 5%;
+}
+
+.profile{
+    width: 50px;
+}
+.profile-detail{
+    position: relative;
+}
+#user{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#user:hover{
+    cursor: pointer;
+}
+
+.log-out{
+    position: absolute;
+    left: 90%;
+    top: 15%;
+    height: 30px;
+    text-align: center;
+    z-index: 999;
+    display: none;
+}
+.log-out-p{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+.log-out-p:hover{
+    cursor: pointer;
+}
+.log-out{
+    cursor: pointer;
+}
+/* LOADING  */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    background-color: #303030;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.loading{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: loading 2s linear infinite;
+}
+
+
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+}
+
+
+
+
+
+/* REPONSIVE  */
+
+
+@media screen and (max-width: 500px) {
+    .box{
+        width: 500px;
+        /* position: relative; */
+    }
+
+    .logo_img{
+        width: 50%;
+        height: 30%;
+    }
+    .logo_word{
+        font-size: 12px;
+        /* position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%; */
+
+    }
+
+    /* .logo_word1{
+        font-size: 7px;
+        position: absolute;
+        left: 30%;
+        top: 12%;
+    }
+
+    .profile-box{
+        position: absolute;
+        left: 30%;
+        width: 10px;
+    } */
 }

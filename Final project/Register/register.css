@@ -6,7 +6,7 @@
 
 }
 
-/* DÙNG ABSOLUTE BỊ MẤT BACKGROUND */
+
 .box{
     display: flex;
     flex-direction: column;
@@ -27,14 +27,14 @@
     border-radius: 5px;
     color: white;
 }
-#btn{
+#btn1{
     background-color: rgb(231, 108, 108);
     border: none;
     height: 30px;
     border-radius: 10px;
     color: white;
 }
-#btn:hover{
+#btn1:hover{
     cursor: pointer;
 }
 
@@ -117,3 +117,80 @@
     display: block;
     
 }
+
+
+/* MENU  */
+.Menu{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    font-size: 30px;
+    /* border: 1px solid black; */
+    height: 120px;
+    z-index: 1;
+    width: 200px;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    
+}
+ul li {
+    list-style: none;
+    margin-bottom: 55px;
+}
+.Menu:hover{
+    cursor: pointer;
+    
+}
+
+
+.Menu:hover .logo_img{
+    filter: blur(5px);
+    transition: ease 0.5s;
+}
+.Menu ul li:hover{
+    opacity: 0.5;
+    transition: ease 0.5s;
+}
+
+.menu{
+    border: none;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: transparent;
+    position: relative;
+    right: 20%;
+}
+.menu:hover{
+    cursor: pointer;
+}
+
+.hidden_menu{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 3px solid black;
+    width: 400px;
+}   
+
+
+
+
+
+
+
+.boxMenu{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 2%;
+    /* background-color: pink; */
+}
+
+
+
+
+

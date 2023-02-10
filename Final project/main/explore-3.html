@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="explore-3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="loader">
+        <div class="loading"></div>
+    </div>
+
+
+    <div class="main-menu">
+        <div class="main-h3">
+            <p >Q U Ỳ N H <br> T R A N G</p>
+
+        </div>
+
+        <div class="main-others">
+            <button class="main-block"></button>
+            <button id="btn-1" class="main-explore">Explore</button>
+            <button id="btn-2" class="main-about">About</button>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="explore-3-box">
+        <img src="memory1.jpg" alt="" class="explore-3-img1">
+        <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t31.18172-8/20248401_902522473220376_8077232414488499661_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9HZPkO1boPsAX8FgtKk&_nc_ht=scontent.fsgn2-8.fna&oh=00_AfDy2cnRxdQbEy6gJFIkKm7qH7wxjv-T7Fcq3ZAf2lwiew&oe=64044FBA" alt="" class="explore-3-img1">
+        <img src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t31.18172-8/20157937_897466143726009_5784724789234743292_o.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=IrUx8oVLeDEAX8J6SG2&tn=Q8fJ6HDMEb_RU8D8&_nc_ht=scontent.fsgn2-7.fna&oh=00_AfBzPTj_c_DMew0Hintl1bltCsv8MHUKaQbpImGjnaiW7Q&oe=64044B60" alt="" class="explore-3-img1">
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="explore-footer">
+        <p class="footer-h2">©2023 Q U Ỳ N H T R A N G</p>
+    </div>
+
+
+    <script>
+        $(window).on("load", function(){
+            $(".loader").fadeOut("1000");
+        })
+        let btn1= document.getElementById("btn-1")
+        let btn2= document.getElementById("btn-2")
+
+
+        btn1.addEventListener("click", function(){
+            document.location= "explore.html"
+        })
+        btn2.addEventListener("click", function(){
+            document.location= "about.html"
+        })
+
+        
+        
+    </script>
+</body>
+</html>

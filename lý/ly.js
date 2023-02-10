@@ -1,3 +1,5 @@
+
+
 let goc = document.getElementById("góc")
 let v0 = document.getElementById("v0")
 let btn = document.getElementById("btn")

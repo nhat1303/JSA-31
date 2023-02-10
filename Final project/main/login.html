@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="login.css">
     <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
-    <link href='https://css.gg/heart.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     
 </head>
 <body>
-
+    <div class="loader">
+        <div class="loading"></div>
+    </div>
 
     <div class="Menu">
         
@@ -26,7 +28,9 @@
                             <li><a href="products.html">Products</a></li>
                             <!-- <li><a href="">Women products</a></li>
                             <li><a href="">Kids products</a></li> -->
-                            <li><a href="">Sign in</a></li>
+                            <li><a href="explore.html">Mom</a></li>
+
+                            <li><a href="register.html">Sign in</a></li>
                             <li><a href=""><i class="gg-shopping-cart"></i></a></li>
                         </ul>
                     </div>
@@ -36,24 +40,43 @@
         </nav>
         
     </div>
-    
 
+    <p id="p_blur" class="login-p">
+        L O G I N
+    </p>
 
-    
-    
+<div class="container">
     <div id="box_blur" class="box">
-        <input required class="input" id="username" type="text" placeholder="Username">
-        <input  class="input" id="password" type="text" placeholder="Password ">
-        <input   class="input" id="repeat_password" type="text" placeholder="Repeat password" >  
-        <input id="checkbox" type="checkbox" > <p class="argee_term">I argee with the <b>Terms and Conditions</b> and the <b>Privacy Policy</b> </p>
-        <button id="btn1">Register</button>
-        <!-- <p class="sign_in">Already have an account ? <a href="login.html">Sign in</a></p> -->
+        <div id="error-box" class="error-box">
+            <p id="error-p" class="error-p"></p>
+        </div>
+
+        <input id="username1" type="text" placeholder="Username">
+        <input id="password1" type="text" placeholder="Password" minlength="8">
+        <button id="btn1">Login</button>
     </div>
+</div>
+    
+
+
+<div class="footer">
+    <div class="footer-img-box">
+        <a href=""><img src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-facebook-4.png    " alt="" class="footer-img"></a>
+        <a href=""><img src="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-instagram-13.png" alt="" class="footer-img"></a>
+    </div>
+    
+</div>
+<script src="explore.js"></script>
+    <script>
+        $(window).on("load", function(){
+            $(".loader").fadeOut("1000");
+        })
+    </script>
 
     <script
     src="https://kit.fontawesome.com/b25957ae4f.js"
     crossorigin="anonymous"
   ></script>
-    <script src="register.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

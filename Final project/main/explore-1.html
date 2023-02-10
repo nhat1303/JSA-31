@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="explore-1.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 
 </head>
 <body>
     <div class="loader">
         <div class="loading"></div>
     </div>
-
 
 
     <div class="main-menu">
@@ -32,35 +32,50 @@
     </div>
 
 
-    <div class="about-box">
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" alt="" class="about-img">
-
-
-
-        <div class="about-detail">
-            <p class="detail-head">A b o u t&nbsp; &nbsp;  m e</p>
-            <p class="detail-general">
-                As a Fulbright scholar, I completed my studies abroad with an MA at the Savannah College of Art and Design, which ultimately helped me to get my foot into the world of fashion and luxury communication. As a believer in sustainable practices, my thesis focused on developing the brand identity and communication of a clean beauty pop-up store under the umbrella of Selfridges.
+    <div class="content-1">
+        <img src="job-1.jpg" alt="" class="content-1-img">
+        <div class="content-1-detail">
+            <p class="content-1-p">
+                2022-2023
             </p>
+        </div>
+    </div>
+
+
+    <div class="content-2">
+        <img src="job-2.jpg" alt="" class="content-2-img">
+        <div class="content-2-detail">
+            <p class="content-2-p">2011-2012</p>
         </div>
     </div>
 
 
 
 
+    <div class="explore-footer">
+        <p class="footer-h2">©2023 Q U Ỳ N H T R A N G</p>
+    </div>
 
 
-
-
-
-
-
-<script src="about.js"></script>
-<script src="explore.js"></script>
     <script>
         $(window).on("load", function(){
             $(".loader").fadeOut("1000");
         })
+        let btn1= document.getElementById("btn-1")
+        let btn2= document.getElementById("btn-2")
+
+
+        btn1.addEventListener("click", function(){
+            document.location= "explore.html"
+        })
+        btn2.addEventListener("click", function(){
+            document.location= "about.html"
+        })
+
+        
+        
+
+
     </script>
 </body>
 </html>

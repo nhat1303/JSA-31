@@ -207,3 +207,39 @@ ul li {
         box-shadow: 1px 5px 2px #e65c00;
     }
 }
+
+
+
+/* RESPONSIVE  */
+
+@media screen and ( max-width: 500px) {
+    /* MENU  */
+    .Menu{
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .menu{
+        font-size: 20px;
+    }
+    .hidden_menu{
+        width: 150px;
+    }
+
+    /* LOGIN  */
+    .login-p{
+        font-size: 30px;
+    }
+
+    .container{
+        width: 300px;
+    }
+    .box{
+        width: 250px;
+    }
+    /* ERROR  */
+    .error-box{
+        font-size: 15px;
+        width: 250px ;
+    }
+}

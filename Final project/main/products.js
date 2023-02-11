@@ -1,11 +1,13 @@
 let hidden = document.getElementById("hidden")
 let hidden_img = document.getElementById("hidden_img")
-let box1 = document.getElementById("box_blur")
+let box1 = document.getElementById("box_blur1")
 let box2 = document.getElementById("box_blur2")
+let box3 = document.getElementById("box_blur3")
 let alert_box= document.getElementById("alert-container")
 let alert_btn = document.getElementById("alert-btn")
 let cart= document.getElementById("cart-box")
 let error_box = document.getElementById("alert-box2")
+
 hidden.style.display="none"
 
 
@@ -15,11 +17,15 @@ document.getElementById('btn').addEventListener("click", function(){
         hidden.style.display="block"
         box1.style.filter= "blur(5px)"
         box2.style.filter= "blur(5px)"
+        box3.style.filter= "blur(5px)"
+        cart.style.filter= "blur(5px)"
         
     }else{
         hidden.style.display="none"
         box1.style.filter = ""
         box2.style.filter = ""
+        box3.style.filter = ""
+        cart.style.filter = ""
     }
 })
 
@@ -36,6 +42,8 @@ scroll.addEventListener("click", function(e){
     hidden.style.display = 'none'
     box1.style.filter = ""
     box2.style.filter = ""
+    box3.style.filter = ""
+    cart.style.filter = ""
 
 })
 
@@ -61,6 +69,7 @@ function ready() {
     }
 
     var addToCartButtons = document.getElementsByClassName('add')
+    
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
@@ -73,6 +82,9 @@ function purchaseClicked() {
     alert_box.style.display="block"
     error_box.style.display="none"
     cart.style.filter= "blur(5px)"
+    box1.style.filter= "blur(5px)"
+    box2.style.filter= "blur(5px)"
+    box3.style.filter= "blur(5px)"
 
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
@@ -97,6 +109,8 @@ function quantityChanged(event) {
 
 function addToCartClicked(event) {
     event.preventDefault()
+    error_box.style.display="none"
+
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('title')[0].innerText
@@ -111,12 +125,16 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             document.getElementById("cart-box").scrollIntoView({
                 behavior:"smooth"
             })
             error_box.style.display="flex"
+            
+             
+            
             return
         }
     }
@@ -158,4 +176,9 @@ alert_btn.addEventListener("click", function(){
     alert_box.style.display="none"
 
     cart.style.filter= ""
+    box1.style.filter= ""
+    box2.style.filter= ""
+    box3.style.filter= ""
 })
+
+

@@ -149,15 +149,17 @@ ul li {
 
 /* FOOTER  */
 .footer{
-    margin-top: 100px;
-    width: 100%;
     height: 50px;
-    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 50px;
+    background-color: white;
     position: relative;
+    margin-bottom: 0;
 }
 
 .footer-img-box{
     position: absolute;
+    bottom: 0;
     left: 50%;  
     width: 200px;
     transform: translateX(-50%);
@@ -167,6 +169,7 @@ ul li {
 
 .footer-img{
     width: 50px;
+    margin: 0;
 }
 
 
@@ -234,3 +237,49 @@ ul li {
 
 
 
+/* RESPONSIVE  */
+
+@media screen and (max-width: 500px) {
+    /* MENU  */
+    .Menu{
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .menu{
+        font-size: 20px;
+    }
+    .hidden_menu{
+        width: 150px;
+    }
+
+    /* REGISTER  */
+
+    .register-h2{
+        font-size: 30px;
+    }
+    .container{
+        width: 300px;
+    }
+    .box{
+        width: 250px;
+    }
+    .argee_term{
+        font-size: 10px;
+    }
+
+    /* ERROR  */
+    .error-box{
+        font-size: 15px;
+        width: 250px ;
+    }
+    /* FOOTER  */
+    .footer{
+        bottom: 0;
+    }
+
+
+    
+
+
+}

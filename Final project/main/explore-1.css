@@ -1,67 +1,73 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+.main-header {
+    text-decoration: none;
+    color: black;
+}
 
-
-.main-menu{
+.main-menu {
     display: flex;
     justify-content: space-between;
     background-color: rgb(240, 237, 229);
     height: 100px;
 }
 
-.main-h3{
+.main-h3 {
     height: 100px;
     font-size: 25px;
     text-align: center;
     width: 300px;
     margin-top: 20px;
-    
+
 }
-.main-others{
+
+.main-others {
     /* border: 1px solid black; */
-    
+
 }
-.main-explore{
+
+.main-explore {
     width: 200px;
     height: 30px;
     border: none;
     border-top: 1px solid black;
-    background:transparent;
+    background: transparent;
     margin-right: 10px;
     padding-top: 20px;
 }
 
-.main-explore:hover{
+.main-explore:hover {
     border-top: 5px rgb(102, 0, 0) solid;
     cursor: pointer;
     color: rgb(102, 0, 0);
 }
-.main-about{
+
+.main-about {
     height: 30px;
     width: 200px;
     border: none;
-    background:transparent;
+    background: transparent;
     border-top: 1px solid black;
     margin-right: 50px;
     padding-top: 20px;
 
 }
 
-.main-about:hover{
+.main-about:hover {
     border-top: 5px rgb(102, 0, 0) solid;
     cursor: pointer;
     color: rgb(102, 0, 0);
 }
 
-.main-block{
+.main-block {
     width: 200px;
     height: 30px;
     border: none;
     /* border-top: 1px solid black; */
-    background:transparent;
+    background: transparent;
     margin-top: 20px;
     margin-right: 10px;
     padding-top: 20px;
@@ -69,32 +75,32 @@
 
 /* CONTENT1 */
 
-.content-1{
+.content-1 {
     position: relative;
     width: 100%;
     height: 700px;
 
 }
 
-.content-1-img{
+.content-1-img {
     margin-top: 20px;
     width: 500px;
     position: absolute;
-    left:50%;
+    left: 50%;
     z-index: 1;
 }
 
-.content-1-detail{
+.content-1-detail {
     width: 800px;
     height: 500px;
     background-color: rgb(236, 236, 236);
     position: absolute;
     left: 20%;
     top: 15%;
-    
+
 }
 
-.content-1-p{
+.content-1-p {
     position: absolute;
     font-size: 40px;
     top: 50%;
@@ -105,25 +111,25 @@
 
 /* CONTENT2 */
 
-.content-2{
+.content-2 {
     position: relative;
     width: 100%;
     height: 700px;
     /* border: 1px solid black; */
 }
 
-.content-2-img{
+.content-2-img {
     margin-top: 20px;
     width: 800px;
     height: 500px;
     position: absolute;
-    left:5%;
+    left: 5%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 }
 
-.content-2-detail{
+.content-2-detail {
     width: 900px;
     height: 400px;
     background-color: rgb(236, 236, 236);
@@ -131,9 +137,10 @@
     left: 40%;
     top: 50%;
     transform: translateY(-50%);
-    
+
 }
-.content-2-p{
+
+.content-2-p {
     position: absolute;
     font-size: 40px;
     top: 50%;
@@ -142,7 +149,7 @@
 }
 
 /* FOOTER */
-.explore-footer{
+.explore-footer {
     margin-top: 500px;
     width: 100%;
     background-color: rgb(196, 196, 196);
@@ -150,7 +157,7 @@
     position: relative;
 }
 
-.footer-h2{
+.footer-h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -161,7 +168,7 @@
 
 
 /* LOADING */
-.loader{
+.loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -175,8 +182,8 @@
     z-index: 10;
 }
 
-.loading{
-    
+.loading {
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -186,16 +193,177 @@
 
 
 @keyframes loading {
-    0%{
+    0% {
         transform: rotate(0deg);
         box-shadow: 1px 5px 2px #e65c00;
     }
-    50%{
+
+    50% {
         transform: rotate(180deg);
         box-shadow: 1px 5px 2px #18b201;
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
         box-shadow: 1px 5px 2px #e65c00;
     }
+}
+
+
+
+/* RESPONSIVE  */
+
+@media screen and (max-width:500px) {
+
+    /* MENU  */
+    .main-header {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+    }
+
+    .main-h3 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+    }
+
+
+    .main-menu {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(240, 237, 229);
+        height: 100px;
+    }
+
+
+    /* BUTTON  */
+    .main-about {
+        height: 30px;
+        width: 100px;
+        border: none;
+        background: transparent;
+        border-top: 1px solid black;
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    .main-explore {
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-top: 1px solid black;
+        background: transparent;
+        margin-right: 10px;
+        padding: 0;
+
+    }
+
+    .main-others {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .main-block {
+        position: absolute;
+        top: 20%;
+    }
+
+    /* CONTENT1 */
+
+    .content-1 {
+        position: relative;
+        width: 100%;
+        height: 500px;
+
+    }
+
+    .content-1-img {
+        margin-top: 20px;
+        width: 300px;
+        position: absolute;
+        left: 35%;
+        z-index: 1;
+    }
+
+    .content-1-detail {
+        width: 300px;
+        height: 250px;
+        background-color: rgb(236, 236, 236);
+        position: absolute;
+        left: 5%;
+        top: 15%;
+
+    }
+
+    .content-1-p {
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        left: 15%;
+        transform: translateY(-50%);
+    }
+
+    /* CONTENT2 */
+
+    .content-2 {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        /* border: 1px solid black; */
+    }
+
+    .content-2-img {
+        margin-top: 20px;
+        width: 350px;
+        height: 250px;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .content-2-detail {
+        width: 300px;
+        height: 150px;
+        background-color: rgb(236, 236, 236);
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+
+    .content-2-p {
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        left: 65%;
+        transform: translateY(-50%);
+    }
+
+    /* FOOTER */
+    .explore-footer {
+        margin-top: 200px;
+        width: 100%;
+        background-color: rgb(196, 196, 196);
+        height: 100px;
+        position: relative;
+    }
+
+    .footer-h2 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20%;
+        font-size: 20px;
+        color: white;
+    }
+
 }

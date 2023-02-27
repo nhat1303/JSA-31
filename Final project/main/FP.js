@@ -29,11 +29,17 @@ user.innerHTML= current_user
 
 
 user.addEventListener("click", function(){
-    log_out.style.display="block"
+    if( log_out.style.display=="none"){
+        log_out.style.display="block"
+
+    }
+    else {
+        log_out.style.display="none"
+    }
 })
 
 log_out.addEventListener("click", function(){
-       
+    
     location.reload()
     user.innerHTML=""
     log_out.style.display="none"

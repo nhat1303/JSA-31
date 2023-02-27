@@ -67,6 +67,9 @@ if (check==null){
             // alert("You must fill username and password")
             error_box.style.display="block"
             error_p.innerHTML ="Warning : You must fill Username!"
+            error_p.style.color="red"
+            error_box.style.backgroundColor="rgb(255, 196, 196)"
+
         }
         else if(password.value ==""){
             error_box.style.display="block"
